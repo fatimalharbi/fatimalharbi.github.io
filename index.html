@@ -71,6 +71,12 @@
         cursor: pointer;
         outline: none;
         float:right;
+        transition: transform 0.5s;
+        color: #FDB74C;
+    }
+    #toggleButton:hover{
+        transform: translateY(-10px);
+        color: #3FBEB3;
     }
     nav .dropdown-btn{
         border: none;
@@ -341,7 +347,7 @@
             <p style="text-align: center; color: #3FBEB3; 
             font-family:'Poppins', sans-serif; font-weight: 600;">Overview Menu</p>
 
-            <button id="toggleButton"> <i class="fa-solid fa-lock fa-xl" style="color: #FDB74C;"></i> </button> 
+            <button id="toggleButton"> <i class="fa-solid fa-lock fa-xl"></i> </button> 
 
             <!--<hr style="border:none; height:3px; background-color: #D9BB67ff;">-->
             </div>
@@ -350,22 +356,22 @@
             <div class="dropdown-container">
                 <a href="#product1" class="video-link submenu" data-video="BeAware.mp4"> <i class="fa-regular fa-circle-play"></i> What is Be Aware?</a>
                 <a href="#product2" class="video-link submenu" data-video="BeAware.mp4"> <i class="fa-regular fa-circle-play"></i> How it works?</a>
-                <a href="#product3" class="video-link submenu" data-video="BeAware.mp4"> <i class="fa-regular fa-circle-play"></i> More</a>
+                <a href="#product3" class="video-link submenu" data-video="BeAware.mp4"> <i class="fa-regular fa-circle-play"></i> Targeted Audience</a>
                 <a href="#quiz1" class="quiz-link submenu"> <i class="fa-regular fa-circle-question"></i> Quiz 1</a>
-                <a href="#product4" class="video-link submenu" data-video="BeAware.mp4"> <i class="fa-regular fa-circle-play"></i> More</a>
+                <a href="#product4" class="video-link submenu" data-video="BeAware.mp4"> <i class="fa-regular fa-circle-play"></i> Why Be Aware?</a>
                 <a href="#quiz2" class="quiz-link submenu"> <i class="fa-regular fa-circle-question"></i> Quiz 2</a>
-                <a href="#product5" class="video-link submenu" data-video="BeAware.mp4"> <i class="fa-regular fa-circle-play"></i> More</a>
-                <a href="#product6" class="video-link submenu" data-video="BeAware.mp4"> <i class="fa-regular fa-circle-play"></i> More</a>
+                <a href="#product5" class="video-link submenu" data-video="BeAware.mp4"> <i class="fa-regular fa-circle-play"></i> Mobile Application</a>
+                <a href="#product6" class="video-link submenu" data-video="BeAware.mp4"> <i class="fa-regular fa-circle-play"></i> Services</a>
                 <a href="#quiz3" class="quiz-link submenu"> <i class="fa-regular fa-circle-question"></i> Quiz 3</a>
                 <a href="#map1" class="map-link submenu"> <i class="fa-regular fa-map"></i> Mental Health Clinics</a>
-                <a href="#product7" class="video-link submenu" data-video="BeAware.mp4"> <i class="fa-regular fa-circle-play"></i> More</a>
-                <a href="#product8" class="video-link submenu" data-video="BeAware.mp4"> <i class="fa-regular fa-circle-play"></i> More</a>
+                <a href="#product7" class="video-link submenu" data-video="BeAware.mp4"> <i class="fa-regular fa-circle-play"></i> Techniques Used</a>
+                <a href="#product8" class="video-link submenu" data-video="BeAware.mp4"> <i class="fa-regular fa-circle-play"></i> About Us</a>
             </div>
 
             <button class="dropdown-btn"> <i class="fa-solid fa-list"></i> Part Two</button>
             <div class="dropdown-container">
-                <a href="#product1" class="video-link submenu" data-video="BeAware.mp4"> <i class="fa-regular fa-circle-play"></i> More</a>
-                <a href="#product2" class="video-link submenu" data-video="BeAware.mp4"> <i class="fa-regular fa-circle-play"></i> More</a>
+                <a href="#product1" class="video-link submenu" data-video="BeAware.mp4"> <i class="fa-regular fa-circle-play"></i> More About Be Aware</a>
+                <a href="#product2" class="video-link submenu" data-video="BeAware.mp4"> <i class="fa-regular fa-circle-play"></i> Who Are We?</a>
                 
             </div>
 
@@ -451,7 +457,7 @@
             var feedback = document.getElementById("feedback");
             if (selectedAnswer) {
                 if (selectedAnswer.value === "1") {
-                    alert("Correct! The main purpose is to manage anxiety." )
+                    feedback.innerHTML = "<p style='color: green;'>Correct! The main purpose is to manage anxiety.</p>";
                 } else {
                     feedback.innerHTML = "<p style='color: red;'>Incorrect. The correct answer is: To manage anxiety.</p>";
                 }
