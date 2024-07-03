@@ -23,18 +23,26 @@
     }
     header{
         grid-area: header;
-        padding: 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        
         background-color:white;
         display:flex;
         justify-content: space-between;
     }
     header .logo{
-        width:80px;
-        height: auto;
+        width:90px;
+        height:fit-content;
     }
     header h1{
         color: #29376Dff;
         font-family:'Montserrat', sans-serif;
+    }
+    header h1 p{
+        color: #29376Dff;
+        font-family:'Montserrat', sans-serif;
+        font-size: 12px;
+        font-weight: 400;
     }
     .after{
         grid-area: after;
@@ -45,9 +53,13 @@
     nav{
         grid-area: nav;
         background-color: rgb(237, 237, 237);
-        border-right: 4px solid #D9BB67ff; /* Add border */
-        border-bottom: 4px solid #D9BB67ff; /* Add border */
+        border-right: 3px solid #D9BB67ff; /* Add border */
+        border-bottom: 3px solid #D9BB67ff; /* Add border */
         border-radius: 5px; /* Rounded corners */
+        margin: 5px;
+        padding: 5px;
+        border-radius: 10px; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
     #nav.expanded {
         height:fit-content;
@@ -72,13 +84,15 @@
         display: block;
         padding-top: 15px;
         padding-bottom: 5px;
-        font-family:'Poppins', sans-serif;
+        font-family:'Montserrat', sans-serif;
+        transition: transform 0.5s;
     }
     .dropdown-container {
         display: none;
         padding-left: 10px;
         padding-top: 3px;
-        background-color: rgba(217, 187, 103, 0.127);
+        background-color: #3fbeb30b;
+        border-radius: 10px;
     }
 
     .dropdown-container a {
@@ -87,21 +101,27 @@
         font-size: 18px;
         color: #46568Bff;
         display: block;
-        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-family:'Montserrat', sans-serif;
+        transition: transform 0.5s;
     }
     nav a:hover, .dropdown-btn:hover {
         color: #3FBEB3;
+        transform: translateY(-10px);
     }
     .dropdown-container a:hover {
         color: #3FBEB3;
+        transform: translateY(-10px);
     }
     main{
         grid-area: main;
-        padding: 2rem;
+        padding: 3rem;
         background-color: rgb(237, 237, 237);
+        border-radius: 10px;
+        margin: 5px;
     }
     #next-button{
         background-color: #3FBEB3;
+        font-family:'Montserrat', sans-serif;
         margin-top: 5px; 
         color: white; 
         border: none; 
@@ -116,6 +136,7 @@
         transition: background-color 0.3s ease;
         float:inline-end;
         transition: transform 0.5s;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     }
     #next-button:hover{
         background-color: #FFB94D;
@@ -150,6 +171,7 @@
         border-radius: 10px; 
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
         font-family: Georgia, 'Times New Roman', Times, serif; 
+        margin: 10px;
     }
 
     /* Quiz question styling */
@@ -157,9 +179,11 @@
         color: #29376Dff; 
         font-size: 24px; 
         margin-bottom: 20px; /* Margin below the quiz question */
+        
     }
     h2{
         color: #29376Dff; 
+        font-family:'Poppins', sans-serif;
     }
 
     /* Quiz choices styling */
@@ -186,6 +210,7 @@
      /* Quiz form submit button styling */
     #quiz-form input[type="submit"] {
             background-color: #FFB94D; 
+            font-family:'Montserrat', sans-serif;
             color: white; 
             border: none; 
             padding: 10px 20px; 
@@ -197,6 +222,7 @@
             cursor: pointer; 
             transition: transform 0.5s;
             border-radius: 5px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
             
         }
 
@@ -204,21 +230,19 @@
             background-color: #3FBEB3; /* Change background color on hover */
             transform: translateY(-10px);
         }
-        h3{
-            color: dimgray;
-            font-family:Georgia, 'Times New Roman', Times, serif;
-        }
+        
         .east-map{
             width: 100%;
             max-width: 1100px;
-            margin: 0 auto;
-            
+            margin: 0 auto; 
             position: relative;
         }
         .east-map img{
             width: 100%;
             height: 100%;
             object-fit: contain;
+            border-radius: 10px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         .pin{
             position:absolute;
@@ -237,7 +261,7 @@
         .pin span{
             color: #29376Dff; ;
             font-size: 0.9em;
-            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-family:'Poppins', sans-serif;
             white-space: nowrap;
             position: absolute;
             left: 1.5em;
@@ -260,6 +284,14 @@
             top: 52%;
             left: 65%;
         }
+        .bae{
+            top: 56%;
+            left: 75%;
+        }
+        .renew{
+            top: 35%;
+            left: 70%;
+        }
         /* Hide the elements initially */
         .pin {
             display: none;
@@ -277,6 +309,7 @@
             cursor: pointer; 
             border-radius: 5px; /* Rounded corners */
             transition: transform 0.5s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
         }
         .dmm-btn:hover{
             background-color: white; 
@@ -298,17 +331,20 @@
     
     <div class="container">
         <header>
-            <h1>Be Aware</h1>
+            <h1>Be Aware <p>Ready to wear your peace of mind?</p></h1>
+            
             <img src="BeAware.png" class="logo">
         </header>
         <div class="after"></div>
         <nav id="nav">
-            <h4 style="text-align: center; color: #29376Dff; 
-            font-family:'Poppins', sans-serif;">Overview Menu</h4>
+            <div id="box">
+            <p style="text-align: center; color: #3FBEB3; 
+            font-family:'Poppins', sans-serif; font-weight: 600;">Overview Menu</p>
 
             <button id="toggleButton"> <i class="fa-solid fa-lock fa-xl" style="color: #FDB74C;"></i> </button> 
 
-            <hr style="border:none; height:3px; background-color: #D9BB67ff;">
+            <!--<hr style="border:none; height:3px; background-color: #D9BB67ff;">-->
+            </div>
 
             <button class="dropdown-btn"> <i class="fa-solid fa-list"></i> Part One</button>
             <div class="dropdown-container">
@@ -516,7 +552,7 @@
         event.preventDefault();
         mainContent.innerHTML = `
             <div>
-                <h2>This is an interactive map to view the mental health clinics in Dammam, Al Khobar and Dhahran.</h2>
+                <h2>This is an interactive map to view the mental health clinics in Dammam and Al Khobar.</h2>
                 <!-- <button id="dmm" class="dammamBtn">Dammam</button> -->
 
                 <div class="east-map">
@@ -532,12 +568,20 @@
                         <span class="location"><i class="fa-solid fa-location-dot fa-xl" style="color: #FFB94D;"></i> Al Alamal</span>
                     </div>
 
-                    <div class="pin khobar malath">
+                    <div class="pin dammam malath">
                         <span class="location"><i class="fa-solid fa-location-dot fa-xl" style="color: #FFB94D;"></i> Malath Alnafs Clinic</span>
                     </div>
 
                     <div class="pin khobar psy">
                         <span class="location"><i class="fa-solid fa-location-dot fa-xl" style="color: #FFB94D;"></i> Psychiatric and mental health services</span>
+                    </div>
+
+                    <div class="pin khobar bae">
+                        <span class="location"><i class="fa-solid fa-location-dot fa-xl" style="color: #FFB94D;"></i> Bautifaul Mind Clinic</span>
+                    </div>
+
+                    <div class="pin dammam renew">
+                        <span class="location"><i class="fa-solid fa-location-dot fa-xl" style="color: #FFB94D;"></i> Renewal and Reward Center</span>
                     </div>
 
                 </div>
